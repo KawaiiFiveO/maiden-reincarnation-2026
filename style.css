@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Verdana', sans-serif;
+  background: #edf2f5;
+  color: #000;
+  overflow-y: scroll;
+}
+
+.container {
+  max-width: 960px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 20px 40px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 24px;
+  color: #003366;
+}
+
+#timer {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.tabs button {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  color: #003366;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px 4px 0 0;
+  transition: background 0.2s ease;
+}
+
+.tabs button:hover {
+  background: #e0e0e0;
+}
+
+.tabs button.active {
+  background: #ffffff;
+  border-bottom: 2px solid white;
+  font-weight: bold;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tab-content h2 {
+  text-align: center;
+  color: #003366;
+  font-size: 20px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+code {
+  font-family: Consolas, monospace;
+  color: crimson;
+  background-color: #f3f3f3;
+  padding: 2px;
+  font-size: 16px;
+}
+
+pre {
+  background: #f3f3f3;
+  border-left: 5px solid #4682b4;
+  padding: 10px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  font-family: Consolas, monospace;
+  font-size: 14px;
+}
+
+footer {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+}
+
+.limits {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.tab-content h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #002244;
+}
+
+.tab-content p {
+  margin: 10px 0 15px;
+  line-height: 1.6;
+}
+
+.problem-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.problem-table th,
+.problem-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+  font-size: 14px;
+}
+
+.problem-table th {
+  background-color: #f2f2f2;
+  color: #003366;
+}
+
+.problem-table td a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.problem-table td a:hover {
+  text-decoration: underline;
+}

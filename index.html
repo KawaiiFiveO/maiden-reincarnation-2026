@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maiden Reincarnation 2026</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <script defer src="script.js"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Maiden Reincarnation Grand Contest 002</h1>
+      <div id="timer">Time Left: --:--:--</div>
+    </header>
+
+    <nav class="tabs">
+      <button data-tab="overview" class="active">Overview</button>
+      
+      <button data-tab="A">Problem A</button>
+      
+      <button data-tab="B">Problem B</button>
+      
+      <button data-tab="C">Problem C</button>
+      
+      <button data-tab="D">Problem D</button>
+      
+      <button data-tab="E">Problem E</button>
+      
+      <button data-tab="F">Problem F</button>
+      
+      <button data-tab="G">Problem G</button>
+      
+      <button data-tab="help">Help</button>
+    </nav>
+
+    <main>
+      <!-- Overview Section -->
+      <section id="overview" class="tab-content active">
+        <h2>Problem List</h2>
+        <table class="problem-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Input/Output</th>
+              <th>Time Limit</th>
+              <th>Memory Limit</th>
+              <th>Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td><a href="#" onclick="switchTab('A')">A</a></td>
+              <td>How to Survive a Game of Old Maid</td>
+              <td>standard input/output</td>
+              <td>2 s</td>
+              <td>256 MB</td>
+              <td>100</td>
+            </tr>
+            
+            <tr>
+              <td><a href="#" onclick="switchTab('B')">B</a></td>
+              <td>Trouble on the Orient Express</td>
+              <td>standard input/output</td>
+              <td>2 s</td>
+              <td>256 MB</td>
+              <td>125</td>
+            </tr>
+            
+            <tr>
+              <td><a href="#" onclick="switchTab('C')">C</a></td>
+              <td>The Great Court of Illusions</td>
+              <td>standard input/output</td>
+              <td>2 s</td>
+              <td>256 MB</td>
+              <td>125</td>
+            </tr>
+            
+            <tr>
+              <td><a href="#" onclick="switchTab('D')">D</a></td>
+              <td>The Duchess' Tea Party</td>
+              <td>standard input/output</td>
+              <td>2 s</td>
+              <td>256 MB</td>
+              <td>150</td>
+            </tr>
+            
+            <tr>
+              <td><a href="#" onclick="switchTab('E')">E</a></td>
+              <td>SSS-Class Raging Loop Hunter</td>
+              <td>standard input/output</td>
+              <td>2 s</td>
+              <td>256 MB</td>
+              <td>150</td>
+            </tr>
+            
+            <tr>
+              <td><a href="#" onclick="switchTab('F')">F</a></td>
+              <td>Villainess Level 99</td>
+              <td>standard input/output</td>
+              <td>2 s</td>
+              <td>256 MB</td>
+              <td>175</td>
+            </tr>
+            
+            <tr>
+              <td><a href="#" onclick="switchTab('G')">G</a></td>
+              <td>Pre-Dinner Service Damage Control</td>
+              <td>standard input/output</td>
+              <td>2 s</td>
+              <td>256 MB</td>
+              <td>175</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Problem Sections -->
+      
+      <section id="A" class="tab-content">
+        <h2>A. How to Survive a Game of Old Maid</h2>
+        <div class="limits">
+          time limit per test: 2 seconds<br>
+          memory limit per test: 256 megabytes
+        </div>
+        <p>Hilda, the maid, ends up passing through the village of Hinamizawa during her travels. The locals have an unusual custom: all grudges and disputes can only be settled through a game.</p><p>Mion, the barkeep at the tavern, finds that Hilda did not bring enough money to cover her own tab. Since Mion is generous, she will cover the remaining balance and allow Hilda to leave — but only if Hilda can defeat her in a game of Old Maid.</p><p>In the card game <em>Old Maid</em>, the goal is to get rid of your cards by finding matching pairs and discarding them. The player left holding the single, unpaired card at the end of the game is the "Old Maid".</p><p>You are given an array of \( n \) integers representing the cards in your hand. In this deck, every number appears exactly twice (forming a matching pair), except for exactly one number which appears only once.</p><p>Help Hilda win the game by finding the value of the <b>single remaining number</b> — the Old Maid!</p>
+        <h3>Input</h3>
+        <p>The first line contains an integer \( n \) \( (1 ≤ n ≤ 10^4) \) — the size of the deck.</p><p>The second line contains \( n \) integers \( a_1, a_2, ..., a_n \) \( (0 ≤ a_i ≤ 10^5) \) — the values of the cards. Every integer appears exactly twice, except for one integer which appears only once.</p>
+        <h3>Output</h3>
+        <p>Print a single integer — the value of the unpaired card (Old Maid).</p>
+        <h3>Example</h3>
+        
+          <p><strong>Input</strong></p>
+          <pre>5
+4 7 2 4 2</pre>
+          <p><strong>Output</strong></p>
+          <pre>7</pre>
+        
+          <p><strong>Input</strong></p>
+          <pre>1
+5</pre>
+          <p><strong>Output</strong></p>
+          <pre>5</pre>
+        
+        
+        <h3>Explanation</h3>
+        <p><p>In the first example, the \( 2 \)'s and \( 4 \)'s form pairs and are removed. The number \( 7 \) has no pair and is left over.</p><p>In the second example, there is only one card, so it is immediately the Old Maid.</p></p>
+        
+      </section>
+      
+      <section id="B" class="tab-content">
+        <h2>B. Trouble on the Orient Express</h2>
+        <div class="limits">
+          time limit per test: 2 seconds<br>
+          memory limit per test: 256 megabytes
+        </div>
+        <p>Erika, the detective, is waiting at a train platform, trying to figure out if the ticket she just bought for the <em>Orient Express</em> will take her to the Northern Duke's Mansion — the location of her next case.</p><p>The train travels strictly in one direction along a specific path. This path is represented by an array of strings \( s \), where \(s_i\) is the name of the \( i \)-th station on the trip.</p><p>Erika has purchased a zone ticket that allows her to travel a maximum of \( k \) stops from where she boarded.</p><p>Given the route array \( s \), the boarding station \( b \), the destination station \( d \), and the max stop limit \( k \) on the ticket, determine if Erika's ticket is <em>valid</em>.</p><p>A ticket is considered valid if and only if the <b>following conditions are met</b>:</p><p>1. Both the boarding station and the destination station exist on the route.</p><p>2. The destination station appears after the boarding station on the route (the train only goes one way!).</p><p>3. The number of stops traveled (the difference between their indices) is less than or equal to the max stop limit.</p>
+        <h3>Input</h3>
+        <p>The first line contains an integer \( k \) \( (1 ≤ k ≤ 100) \) — the maximum number of stops indicated on the ticket.</p><p>The second line contains a string \( b \) — the name of the boarding station.</p><p>The third line contains a string \( d \) — the name of the destination station.</p><p>The fourth line contains an integer \( n \) \( (1 ≤ n ≤ 100) \) — the number of stops on the route.</p><p>The next \( n \) lines each contain a single string \( s_i \) — the name of the \( i \)-th station on the route, in order. All names on the route are unique.</p><p>Each name is a string of English letters, length between \( 1 \) and \( 20 \).</p>
+        <h3>Output</h3>
+        <p>Print <code>true</code> if Erika's train ticket is valid. Otherwise, print <code>false</code>.</p>
+        <h3>Example</h3>
+        
+          <p><strong>Input</strong></p>
+          <pre>2
+Rokkenjima
+Wyverngarde
+5
+Aincrad
+Rokkenjima
+Penacony
+Wyverngarde
+IcewindDale</pre>
+          <p><strong>Output</strong></p>
+          <pre>true</pre>
+        
+          <p><strong>Input</strong></p>
+          <pre>2
+Red
+Crystal
+3
+Red
+Blue
+Yellow</pre>
+          <p><strong>Output</strong></p>
+          <pre>false</pre>
+        
+          <p><strong>Input</strong></p>
+          <pre>3
+Cyoria
+Barovia
+5
+Barovia
+Westeros
+Cyoria
+Sorcier
+Narnia</pre>
+          <p><strong>Output</strong></p>
+          <pre>false</pre>
+        
+        
+        <h3>Explanation</h3>
+        <p><p>In Example 1, you board at "Rokkenjima" (index \( 1 \)) and get off at "Wyverngarde" (index \( 3 \)). The destination is after the boarding station. The number of stops traveled is \( 3 - 1 = 2 \). Because \( 2 ≤ k = 2 \) (the number of max stops), your ticket is valid.</p><p>In Example 2, "Crystal" is not a station on the route, so the ticket is invalid.</p><p>In Example 3, "Barovia" (index \( 0 \)) appears <em>before</em> "Cyoria" (index \( 2 \)). Since this train only goes in one direction, you cannot reach your destination.</p></p>
+        
+      </section>
+      
+      <section id="C" class="tab-content">
+        <h2>C. The Great Court of Illusions</h2>
+        <div class="limits">
+          time limit per test: 2 seconds<br>
+          memory limit per test: 256 megabytes
+        </div>
+        <p>Clara, the attorney, has been summoned to the Great Court of Illusions. She must defend her client — the villainess, Artezia — in a trial. Battler, the lead prosecutor, has prepared a number of witnesses that he hopes will be sufficient to prove Artezia's involvement in the crime.</p><p>Clara is given a transcript of the current witness' testimony, represented as an array \( a \) of length \( n \) of non-zero integers.</p><p>The testimony is a timeline of statements about different suspects:</p><p>A positive integer \( x \) means the witness claims: "I saw suspect \( x \) at the scene."</p><p>A negative integer \( -x \) means the witness claims: "I did NOT see suspect \( x \) at the scene."</p><p>The jury will only believe a contiguous segment of the testimony if it is <em>credible</em>. A segment of testimony is considered credible if it contains absolutely no contradictions. A contradiction occurs if a segment contains both a claim that suspect \( x \) was there (\( x \)) and a claim that suspect \( x \) was not there (\( -x \)).</p><p>(Note: A witness repeating the exact same claim, such as \( [2, 3, 2] \), is just them reinforcing their story and is NOT considered a contradiction.)</p><p>To destroy the witness' case, you want to point out how little of their story actually makes sense. Help Clara win the trial by finding the length of the <b>longest credible contiguous segment</b> of the testimony.</p>
+        <h3>Input</h3>
+        <p>The first line contains an integer \( n \) \( (1 ≤ n ≤ 10^5) \) — the number of statements in the testimony.</p><p>The second line contains \( n \) space-separated integers \( a_1, a_2, ..., a_n \) \( (-10^5 ≤ a_i ≤ 10^5, a_i ≠ 0) \) — the statements made by the witness.</p>
+        <h3>Output</h3>
+        <p>Print a single integer — the length of the longest credible contiguous segment of the testimony.</p>
+        <h3>Example</h3>
+        
+          <p><strong>Input</strong></p>
+          <pre>6
+1 2 3 -2 4 1</pre>
+          <p><strong>Output</strong></p>
+          <pre>4</pre>
+        
+          <p><strong>Input</strong></p>
+          <pre>5
+7 8 7 8 9</pre>
+          <p><strong>Output</strong></p>
+          <pre>5</pre>
+        
+        
+        <h3>Explanation</h3>
+        <p><p>In the first example, the longest credible segment is \( [3, -2, 4, 1] \) with a length of \( 4 \).</p><p>In the second example, the witness repeats themself, but never contradicts themself, so the entire array is credible.</p></p>
+        
+      </section>
+      
+      <section id="D" class="tab-content">
+        <h2>D. The Duchess' Tea Party</h2>
+        <div class="limits">
+          time limit per test: 2 seconds<br>
+          memory limit per test: 256 megabytes
+        </div>
+        <p>Duchess Chloé is hosting an exclusive tea party for the local high society. She has invited \( n \) guests, including the esteemed Lady Lambda, and she has exactly one large circular table with \( n \) seats.</p><p>Each guest has a social standing, represented by an integer array \( a \) of length \( n \), where \(a_i\) is the prestige of the \( i \)-th guest at the party.</p><p>High-society guests are very particular about who they sit next to. If two adjacent guests have vastly different prestige levels, it creates a palpable, awkward tension. The <em>awkwardness</em> of a seating arrangement is defined as the maximum absolute difference in prestige between any two adjacent guests at the table.</p><p>Since the table is circular, the guest sitting in the last seat is adjacent to the guest sitting in the first seat.</p><p>Find the <b>minimum possible awkwardness</b> Chloé can achieve by rearranging the guests' seats optimally.</p>
+        <h3>Input</h3>
+        <p>The first line contains an integer \( n \) \( (3 ≤ n ≤ 10^5) \) — the number of guests.</p><p>The second line contains \( n \) space-separated integers \( a_1, a_2, ..., a_n \) \( (1 ≤ a_i ≤ 10^9) \) — the prestige values of the guests.</p>
+        <h3>Output</h3>
+        <p>Print a single integer — the minimum possible awkwardness value of the optimal seating arrangement.</p>
+        <h3>Example</h3>
+        
+          <p><strong>Input</strong></p>
+          <pre>4
+1 5 8 9</pre>
+          <p><strong>Output</strong></p>
+          <pre>7</pre>
+        
+          <p><strong>Input</strong></p>
+          <pre>3
+10 10 10</pre>
+          <p><strong>Output</strong></p>
+          <pre>0</pre>
+        
+        
+        <h3>Explanation</h3>
+        <p><p>In the first example, an optimal seating arrangement is \( [1, 8, 9, 5] \). The maximum difference (awkwardness) is \( 7 \). It is impossible to achieve an awkwardness lower than \( 7 \).</p><p>In the second example, all guests have the exact same prestige. There is no tension at all, so the awkwardness is \( 0 \).</p></p>
+        
+      </section>
+      
+      <section id="E" class="tab-content">
+        <h2>E. SSS-Class Raging Loop Hunter</h2>
+        <div class="limits">
+          time limit per test: 2 seconds<br>
+          memory limit per test: 256 megabytes
+        </div>
+        <p>Kim Gong-ja is a Seer trapped in a mysterious time loop. He is forced to play the game of <em>Werewolf</em> over and over with the same group of villagers.</p><p>After a number of loops, he has finally identified that there are \( w \) wolves in the village (with IDs from \( 0 \) to \( w - 1 \)). To break the loop, he must witness each of the \( w \) wolves performing a "suspicious action" at least once.</p><p>Gong-ja has a notebook that predicts every suspicious wolf action that will happen tonight. The notebook provides a list of \( n \) observations, where the \( i \)-th observation is defined by two integer values:</p><p>\( t_i \) — the time that the suspicious action occurs.</p><p>\( m_i \) — the ID of the wolf that performed the suspicious action.</p><p>Gong-ja wants to stay "Active" for the shortest possible continuous duration. He can choose any start time \( t_\text{start} \) and any end time \( t_\text{end} \). He will witness every observation where \( t_\text{start} ≤ t_i ≤ t_\text{end} \).</p><p>Find the <b>minimum possible duration</b> (\( t_\text{end} - t_\text{start} \)) such that Gong-ja witnesses at least one suspicious action from every one of the \( w \) wolves.</p>
+        <h3>Input</h3>
+        <p>The first line contains an integer \( w \) \( (1 ≤ w ≤ 10^5) \) — the number of wolves in the village.</p><p>The second line contains an integer \( n \) \( (w ≤ n ≤ 10^5) \) — the number of observations in the notebook.</p><p>The next \( n \) lines each contain two space-separated integers \( t_i, m_i \) \( (0 ≤ t_i ≤ 10^9, 0 ≤ m_i < w) \) — the time and the wolf ID for that observation. All time values are unique.</p>
+        <h3>Output</h3>
+        <p>Print a single integer — the minimum duration required to observe all wolves at least once.</p>
+        <h3>Example</h3>
+        
+          <p><strong>Input</strong></p>
+          <pre>3
+5
+10 0
+20 1
+25 0
+30 2
+40 1</pre>
+          <p><strong>Output</strong></p>
+          <pre>10</pre>
+        
+        
+        <h3>Explanation</h3>
+        <p><p>If you choose the window from \( t_a = 20 \) to \( t_b = 30 \):</p><p>At \( t = 20 \), you see Wolf \( 1 \).</p><p>At \( t = 25 \), you see Wolf \( 0 \).</p><p>At \( t = 30 \), you see Wolf \( 2 \).</p><p>You have seen all \( 3 \) wolves. The duration is \( 30 - 20 = 10 \). This is the shortest possible duration.</p></p>
+        
+      </section>
+      
+      <section id="F" class="tab-content">
+        <h2>F. Villainess Level 99</h2>
+        <div class="limits">
+          time limit per test: 2 seconds<br>
+          memory limit per test: 256 megabytes
+        </div>
+        <p>Yumiella may be the hidden boss, but she's not the Demon Lord. To prevent her own downfall in the future, she needs to level up as quickly as possible before the academy arc begins.</p><p>She begins the story with \( 0 \) XP and \( 0 \) Power. Her goal is to reach a total of \( t \) experience points as quickly as possible.</p><p>There are \( n \) unique quests available in the story. The \( i \)-th quest is defined by four integer values:</p><p>\( a_i \) — the minimum power required to start the quest.</p><p>\( b_i \) — the amount of XP gained upon completion.</p><p>\( c_i \) — the amount of permanent power gained upon completion.</p><p>\( d_i \) — the time (in minutes) it takes to complete the quest.</p><p>Yumiella can complete quests in any order, provided she meets the minimum power requirement at the time that she starts the quest. Each quest can only be completed once.</p><p>Help her find the <b>minimum total time</b> required to reach at least \( t \) XP. If it is impossible to reach the target XP with the available quests, return \( -1 \).</p>
+        <h3>Input</h3>
+        <p>The first line contains an integer \( t \) \( (1 ≤ t ≤ 500) \) — the target XP.</p><p>The second line contains an integer \( n \) \( (1 ≤ n ≤ 500) \) — the number of available quests.</p><p>The next \( n \) lines each contain four space-separated integers \( a_i, b_i, c_i, d_i \) \( (0 ≤ a_i ≤ 500, 1 ≤ b_i ≤ 500, 0 ≤ c_i ≤ 500, 1 ≤ d_i ≤ 10^6) \) — the values defining the quest.</p>
+        <h3>Output</h3>
+        <p>Print a single integer — the minimum total time required to reach the target XP. If it is impossible, print \( -1 \).</p>
+        <h3>Example</h3>
+        
+          <p><strong>Input</strong></p>
+          <pre>100
+3
+0 10 10 5
+0 20 1 10
+10 90 5 20</pre>
+          <p><strong>Output</strong></p>
+          <pre>25</pre>
+        
+          <p><strong>Input</strong></p>
+          <pre>200
+2
+10 10 10 10
+5 20 1 5</pre>
+          <p><strong>Output</strong></p>
+          <pre>-1</pre>
+        
+        
+        <h3>Explanation</h3>
+        <p><p>In the first example, the optimal strategy is to complete quest \( 1 \), then quest \( 3 \). The time taken is \( 25 \) minutes.</p><p>In the second example, it is impossible for Yumiella to complete any quests, so the target XP cannot be reached.</p></p>
+        
+      </section>
+      
+      <section id="G" class="tab-content">
+        <h2>G. Pre-Dinner Service Damage Control</h2>
+        <div class="limits">
+          time limit per test: 2 seconds<br>
+          memory limit per test: 256 megabytes
+        </div>
+        <p>Lady Kanna is placed in charge of the dinner service at the Addis Estate. The head chef, Gordon, has called out sick, so it is up to Kanna to manage the dinner service, which is being attended by many high-ranking nobles.</p><p>The dinner rush has just begun, and Kanna has a rail full of order tickets that need to be cooked.</p><p>You are given an integer array of orders \( a \), where \( a_i \) represents the time in minutes it takes to cook the \( i \)-th dish. There are \( k \) identical line cooks available to help you prepare the food.</p><p>Because the tickets are printed on a single continuous rail, the dishes must be cooked in the exact order they appear. You must divide the rail of tickets into \( k \) contiguous segments and assign one segment to each line cook.</p><p>All \( k \) line cooks will start cooking at the exact same time and will cook their assigned dishes sequentially. The dinner service is considered complete when all cooks have finished their assigned segments of dishes.</p><p>As the head chef, Kanna's goal is to delegate the tickets to minimize the total time it takes to finish all the orders. Help her find the <b>minimum possible time</b> required to complete the dinner service.</p>
+        <h3>Input</h3>
+        <p>The first line contains an integer \( k \) \( (k ≤ n) \) — the number of line cooks.</p><p>The second line contains an integer \( n \) \( (1 ≤ n ≤ 10^5) \) — the number of orders.</p><p>The third line contains \( n \) space-separated integers \( a_1, a_2, ..., a_n \) \( (1 ≤ a_i ≤ 10^4) \) — the time needed to cook each order.</p>
+        <h3>Output</h3>
+        <p>Print a single integer — the minimum possible time required to complete the dinner service, in minutes.</p>
+        <h3>Example</h3>
+        
+          <p><strong>Input</strong></p>
+          <pre>2
+5
+7 2 5 10 8</pre>
+          <p><strong>Output</strong></p>
+          <pre>18</pre>
+        
+          <p><strong>Input</strong></p>
+          <pre>3
+3
+15 10 12</pre>
+          <p><strong>Output</strong></p>
+          <pre>15</pre>
+        
+        
+        <h3>Explanation</h3>
+        <p><p>In the first example, the optimal allocation is \( [7, 2, 5] \) and \( [10, 8] \), which results in a minimum service time of \( 18 \) minutes.</p><p>In the second example, since you have \( 3 \) cooks and \( 3 \) orders, the optimal strategy is to assign exactly one order to each cook. The service will finish when the longest dish is completed, which takes \( 15 \) minutes.</p></p>
+        
+      </section>
+      
+
+      <!-- Help Section -->
+      <section id="help" class="tab-content">
+        <h2>Help: Standard Input/Output</h2>
+        <p>
+          In programming competitions, problems usually require you to read from <strong>standard input</strong> and write to <strong>standard output</strong>.
+        </p>
+        <h3>What is Standard Input?</h3>
+        <p>
+          This is the input your program reads from the console. You don't need to open any files or create a GUI. Just read using language-specific commands like <code>cin</code> (C++) or <code>input()</code> (Python).
+        </p>
+        <h3>What is Standard Output?</h3>
+        <p>
+          This is where your program writes its answers — again, through the console. Use commands like <code>cout</code> (C++) or <code>print()</code> (Python). Make sure the output matches the required format exactly.
+        </p>
+        <h3>Sample Problem:</h3>
+        <p>Given two integers \( A \) and \( B \), print their sum.</p>
+        <h3>Input</h3>
+        <pre>6 7</pre>
+        <h3>Output</h3>
+        <pre>13</pre>
+        <h3>Sample Solution Template</h3>
+        <p><strong>In C++</strong></p>
+        <pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int A, B;
+    cin >> A >> B; // Read two integers
+    cout << A + B << "\n"; // Print their sum
+    return 0;
+}</pre>
+        <p><strong>In Python</strong></p>
+        <pre># Read input, split by space, convert to int
+A, B = map(int, input().split())
+print(A + B)</pre>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>© 2026 Maiden Reincarnation. All problems are fictional.</p>
+    </footer>
+  </div>
+</body>
+</html>
